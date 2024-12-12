@@ -6,37 +6,25 @@
 #include "Tree.h"
 
 
-int main()
-{
-    Tree T;
-    int nombre = 10000;
+int main() {
+
+    int nombre = 100;
+    Tree tree(nombre);
+    for (int i = 0; i < nombre; i++)
+    {
+        tree.push(rand() % nombre);
+    }
     
-   std::vector<int> valeurs(nombre);
-    for (int i = 0; i < valeurs.size(); i++)
+
+    tree.printTree();
+
+    while (!tree.isEmpty())
     {
-        valeurs[i] = rand() % nombre;
+        std::cout << "Retrait de : " << tree.pop() << std::endl;
     }
 
-    for (int i = 0; i < valeurs.size(); i++)
-    {
-        T.push(valeurs[i]);
-    }
-     
-    // afficher l'arbre
-    // 
-    //std::cout << "Avant de retirer :" << std::endl;
-    //T.printTree();
 
-
-    // retirer tous les elements : ils seront retires du plus petit au plus grand
-    while (!T.isEmpty())
-    {
-        std::cout << "Retrait de :" << T.pop() << std::endl;
-        //T.printTree();
-    }
-
-   
-
+    return 0;
 }
 
 
