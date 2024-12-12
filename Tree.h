@@ -15,7 +15,6 @@ public:
 	Tree(int capacite);// constructeur de l'arbre
 	bool isEmpty()const;
 	void push(int val);// fonction pour inserer une veleur
-	void change( int& check);// pour faire le chagement des noeuds
 	void organize();// pour organiser l'arbre pour avoir le minimum a la racine
 
 	int pop();// pour retirer une valeur a la racine

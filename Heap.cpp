@@ -8,15 +8,20 @@
 
 int main() {
 
-    int nombre = 100;
+    int nombre = 1000;
     Tree tree(nombre);
     for (int i = 0; i < nombre; i++)
     {
         tree.push(rand() % nombre);
     }
     
+    // afficher l'arbre
+    //tree.printTree();
 
-    tree.printTree();
+    std::cout << std::endl;
+    std::cout << std::endl;
+    std::cout << "Retirer tous les elements de l'arbre"  << std::endl;
+    std::cout<< std::endl;
 
     while (!tree.isEmpty())
     {
